@@ -374,19 +374,20 @@
     return;
   }
 
-  const note = encodeURIComponent('Donation to Team Uraan');
+  const note = encodeURIComponent('DonationRahidulSekh');
   const name = encodeURIComponent(UPI_NAME);
   const id   = encodeURIComponent(UPI_ID);
   const amt  = selectedAmount;
 
+
   // Android Intent URL — works in Chrome on Android
-  const intentUrl = `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`;
+  //const intentUrl = `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`;
 
   const links = {
-    gpay:    `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`,
-    phonepe: `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=com.phonepe.app;end`,
-    paytm:   `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=net.one97.paytm;end`,
-    upi:     `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`
+    gpay:    `tez://upi/pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}`,
+    phonepe: `phonepe://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}`,
+    paytm:   `paytmmp://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}`,
+    upi:     `upi://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}`
   };
  alert(links[app]);
      
