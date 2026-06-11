@@ -388,7 +388,8 @@
     paytm:   `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=net.one97.paytm;end`,
     upi:     `intent://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end`
   };
-
+ alert(links[app]);
+     
  const a = document.createElement('a');
   a.href = links[app] || links.upi;
   document.body.appendChild(a);
