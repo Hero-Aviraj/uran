@@ -389,7 +389,7 @@
     paytm:   `paytmmp://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}`,
     upi:     `upi://pay?pa=${id}&pn=${name}&am=${amt}&cu=INR&tn=${note}`
   };
- alert(links[app]);
+ 
      
  const a = document.createElement('a');
   a.href = links[app] || links.upi;
